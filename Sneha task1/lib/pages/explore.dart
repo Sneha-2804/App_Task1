@@ -105,7 +105,7 @@ class Explore extends StatelessWidget {
                           Image.asset(
                             imagePath,
                             height: 180,
-                            width: 150,
+                            width: 130,
                             fit: BoxFit.cover,
                           ),
                           Text(

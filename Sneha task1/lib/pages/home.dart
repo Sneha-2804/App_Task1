@@ -82,9 +82,12 @@ class _HomeState extends State<Home> {
                 child: showItems(),
               ),
               Text("Trending Deals Under \u20B9499", style: AppWidgets.boldTextFeildStyle()),
-              Container(
-                margin: const EdgeInsets.all(10.0),
-                child: showItems1(),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Container(
+                  margin: const EdgeInsets.all(10.0),
+                  child: showItems1(),
+                ),
               ),
             ],
           ),
@@ -125,7 +128,7 @@ class _HomeState extends State<Home> {
 
   Widget _buildCategories(String imagePath, String label) {
     return Container(
-      margin: const EdgeInsets.only(right: 15.0),
+      margin: const EdgeInsets.all(5.0),
       child: Material(
         elevation: 5.0,
         borderRadius: BorderRadius.circular(10),
@@ -206,7 +209,7 @@ class _HomeState extends State<Home> {
                         Image.asset(
                         imagePath,
                         height: 180,
-                        width: 150,
+                        width: 120,
                         fit: BoxFit.cover,
                         ),
                         Text(
@@ -284,7 +287,7 @@ class _HomeState extends State<Home> {
                           Image.asset(
                             imagePath,
                             height: 180,
-                            width: 150,
+                            width: 120,
                             fit: BoxFit.cover,
                           ),
                           Text(
